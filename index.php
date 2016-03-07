@@ -22,9 +22,9 @@
       var ok = 1;
       function deplace()
       {
-        $('#vr').animate({left: '-=600'}, 3000, 'linear', function(){ //on peut augmenter la difficulté avec cette variable (2em)
-          var vrX = Math.floor(Math.random()*194)+70;
-          var vrY = 100;
+        $('#vr').animate({left: '-=1100'}, 1000, 'linear', function(){ //on peut augmenter la difficulté avec cette variable (2em)
+          var vrX = Math.floor(Math.random()*450)+50;
+          var vrY = 900;
           $('#vr').css('left',vrY);
           $('#vr').css('top',vrX);
           ok = 1;
@@ -39,7 +39,7 @@
         if (e.which == 40)
         {
           vjX = parseInt($('#voiture').css('top'));
-          if (vjX < 700)
+          if (vjX < 400)
           $('#voiture').css('top', vjX+30);
         }
         if (e.which == 38)
