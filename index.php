@@ -31,7 +31,7 @@
           ok = 1;
         });
 
-        $('.fond').animate({left: '-=200'}, 1000, 'linear', function(){
+        $('.fond').animate({left: '-=1251'}, 2000, 'linear', function(){
           $('.fond').css('left',0);
           deplace();
         });
