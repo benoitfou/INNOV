@@ -11,7 +11,7 @@
   <div id="jeu">
     <img id="fond1" class="fond" src="image/route.png">
     <img id="fond2" class="fond" src="image/route.png">
-    <img id="voiture" src="image/vj.png">
+    <img id="lapin" src="image/lapin1.png">
     <img id="vr" src="image/vr.png">
   </div>
   <audio preload="auto" id="son"><source src="son/manger.mp3" type="audio/mp3"><source src="son/manger.ogg" type="audio/ogg"></audio>
@@ -30,7 +30,7 @@
           $('#vr').css('top',vrX);
           ok = 1;
         });
-        $('.fond').animate({left: '-=1100'}, 2000, 'linear', function(){
+        $('.fond').animate({left: '-=500'}, 2000, 'linear', function(){
           $('.fond').css('left',0);
           deplace();
         });
@@ -39,15 +39,15 @@
       $(document).keydown(function(e){
         if (e.which == 40)
         {
-          vjX = parseInt($('#voiture').css('top'));
+          vjX = parseInt($('#lapin').css('top'));
           if (vjX < 500)
-          $('#voiture').css('top', vjX+30);
+          $('#lapin').css('top', vjX+30);
         }
         if (e.which == 38)
         {
-          vjX = parseInt($('#voiture').css('top'));
+          vjX = parseInt($('#lapin').css('top'));
           if (vjX > 20)
-            $('#voiture').css('top', vjX-30);
+            $('#lapin').css('top', vjX-30);
         }
       });
 
@@ -55,7 +55,7 @@
 
       function collision()
       {
-        vjX = parseInt($('#voiture').css('top'));
+        vjX = parseInt($('#lapin').css('top'));
         vrX = parseInt($('#vr').css('top'));
         vjY = 10;
         vrY = parseInt($('#vr').css('left'));
