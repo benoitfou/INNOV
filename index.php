@@ -22,33 +22,35 @@
       var ok = 1;
       function deplace()
       {
-        $('#vr').animate({top: '-=500'}, 2500, 'linear', function(){ //on peut augmenter la difficulté avec cette variable (1er)
+        $('#vr').animate({left: '-=600'}, 3000, 'linear', function(){ //on peut augmenter la difficulté avec cette variable (2em)
           var vrX = Math.floor(Math.random()*194)+70;
-          var vrY = 1000;
-          $('#vr').css('top',vrY);
-          $('#vr').css('left',vrX);
+          var vrY = 100;
+          $('#vr').css('left',vrY);
+          $('#vr').css('top',vrX);
           ok = 1;
         });
-        $('.fond').animate({top: '-=360'}, 1000, 'linear', function(){
-          $('.fond').css('top',0);
+        $('.fond').animate({left: '-=500'}, 1000, 'linear', function(){
+          $('.fond').css('left',0);
           deplace();
         });
       };
 	   
       $(document).keydown(function(e){
-        if (e.which == 39)
+        if (e.which == 40)
         {
-          vjX = parseInt($('#voiture').css('left'));
-          if (vjX < 1000)
-          $('#voiture').css('left', vjX+30);
+          vjX = parseInt($('#voiture').css('top'));
+          if (vjX < 700)
+          $('#voiture').css('top', vjX+30);
         }
-        if (e.which == 37)
+        if (e.which == 38)
         {
-          vjX = parseInt($('#voiture').css('left'));
-          if (vjX > 70)
-            $('#voiture').css('left', vjX-30);
+          vjX = parseInt($('#voiture').css('top'));
+          if (vjX > 20)
+            $('#voiture').css('top', vjX-30);
         }
       });
+
+
 
       function collision()
       {
