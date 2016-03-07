@@ -41,7 +41,7 @@
         if (e.which == 40)
         {
           vjX = parseInt($('#lapin').css('top'));
-          if (vjX < 500)
+          if (vjX < 400)
           $('#lapin').css('top', vjX+30);
         }
         if (e.which == 38)
@@ -51,9 +51,6 @@
             $('#lapin').css('top', vjX-30);
         }
       });
-
-
-
       function collision()
       {
         vjX = parseInt($('#lapin').css('top'));
@@ -74,9 +71,6 @@
       setInterval(collision, 20);
     });
   </script>
-
-
-
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>
