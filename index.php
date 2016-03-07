@@ -11,7 +11,7 @@
   <div id="jeu">
     <img id="fond1" class="fond" src="image/route.png">
     <img id="fond2" class="fond" src="image/route.png">
-    <img id="lapin" src="image/lapin1.png">
+    <img id="lapin" src="image/lapin1.gif">
     <img id="vr" src="image/vr.png">
   </div>
   <audio preload="auto" id="son"><source src="son/manger.mp3" type="audio/mp3"><source src="son/manger.ogg" type="audio/ogg"></audio>
@@ -30,7 +30,8 @@
           $('#vr').css('top',vrX);
           ok = 1;
         });
-        $('.fond').animate({left: '-=500'}, 2000, 'linear', function(){
+
+        $('.fond').animate({left: '-=200'}, 1000, 'linear', function(){
           $('.fond').css('left',0);
           deplace();
         });
