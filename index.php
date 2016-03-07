@@ -9,12 +9,13 @@
 <body>
  Collisions : <span id="info">0</span>
   <div id="jeu">
-    <img id="fond1" class="fond" src="route.png">
-    <img id="fond2" class="fond" src="route.png">
+    <img id="fond1" class="fond" src="image/route.png">
+    <img id="fond2" class="fond" src="image/route.png">
     <img id="voiture" src="image/vj.png">
     <img id="vr" src="image/vr.png">
   </div>
-  <audio preload="auto" id="son"><source src="beep.mp3" type="audio/mp3"><source src="beep.ogg" type="audio/ogg"></audio>
+  <audio preload="auto" id="son"><source src="son/manger.mp3" type="audio/mp3"><source src="son/manger.ogg" type="audio/ogg"></audio>
+  <audio preload="auto" id="musique"><source src="son/musique.mp3" type="audio/mp3"><source src="son/musique.ogg" type="audio/ogg"></audio>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script>
@@ -22,14 +23,14 @@
       var ok = 1;
       function deplace()
       {
-        $('#vr').animate({left: '-=1100'}, 1000, 'linear', function(){ //on peut augmenter la difficulté avec cette variable (2em)
+        $('#vr').animate({left: '-=1200'}, 2000, 'linear', function(){ //on peut augmenter la difficulté avec cette variable (2em)
           var vrX = Math.floor(Math.random()*450)+50;
-          var vrY = 900;
+          var vrY = 1100;
           $('#vr').css('left',vrY);
           $('#vr').css('top',vrX);
           ok = 1;
         });
-        $('.fond').animate({left: '-=500'}, 1000, 'linear', function(){
+        $('.fond').animate({left: '-=1100'}, 2000, 'linear', function(){
           $('.fond').css('left',0);
           deplace();
         });
@@ -39,7 +40,7 @@
         if (e.which == 40)
         {
           vjX = parseInt($('#voiture').css('top'));
-          if (vjX < 400)
+          if (vjX < 500)
           $('#voiture').css('top', vjX+30);
         }
         if (e.which == 38)
@@ -54,10 +55,10 @@
 
       function collision()
       {
-        vjX = parseInt($('#voiture').css('left'));
-        vrX = parseInt($('#vr').css('left'));
+        vjX = parseInt($('#voiture').css('top'));
+        vrX = parseInt($('#vr').css('top'));
         vjY = 10;
-        vrY = parseInt($('#vr').css('top'));
+        vrY = parseInt($('#vr').css('left'));
         if (((vrX > vjX) && (vrX < (vjX+66)) && (vrY > vjY) && (vrY < (vjY+150)) && (ok == 1)) 
         || ((vjX > vrX) && (vjX < (vrX+66)) && (vrY > vjY) && (vrY < (vjY+150)) && (ok == 1)))
         {
@@ -68,6 +69,7 @@
         }
       }
       deplace();
+      $('#musique')[0].play();
       setInterval(collision, 20);
     });
   </script>

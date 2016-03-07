@@ -15,7 +15,7 @@
     #voiture{
       z-index: 100; 
       position: absolute; 
-      top: 10px; 
+      top: 50px; 
       left: 48px;
     }
     #vr{
