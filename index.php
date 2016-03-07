@@ -60,7 +60,7 @@
         vrX = parseInt($('#vr').css('top'));
         vjY = 10;
         vrY = parseInt($('#vr').css('left'));
-        if (((vrX > vjX) && (vrX < (vjX+66)) && (vrY > vjY) && (vrY < (vjY+150)) && (ok == 1)) 
+        if (((vrX > vjX) && (vrX < (vjX+180)) && (vrY > vjY) && (vrY < (vjY+150)) && (ok == 1)) 
         || ((vjX > vrX) && (vjX < (vrX+66)) && (vrY > vjY) && (vrY < (vjY+150)) && (ok == 1)))
         {
           $('#son')[0].play();
