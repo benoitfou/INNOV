@@ -6,17 +6,26 @@
 	<title>INNOV'UP</title>
 </head>
 <body>
+<?php 
+
+if (isset($_GET['logo'])) {
+    $logo= $_GET['logo'];
+}else{
+    $logo=0;
+}
+ ?>
 <div id="acceuilext">
 <h1 id="titreEntreprise">Pick-up</h1>
 <?php include 'acceuil.php'; ?>
- <center>Score : <span id="info">0</span></center>
+<input id="divlogo" value="<?php echo $logo?>"></input>
+ <center id="score">Score : <span id="info">0</span></center>
   <div id="jeu">
 
     <img id="fond1" class="fond" src="image/route.png">
     <img id="fond2" class="fond" src="image/route.png">
     <img id="lapin" src="image/lapin1.gif">
 
-    <div id="vr">
+    <div id="vr" value=>
       <img id="vr1" src="image/logo1.png">
     </div>
   </div>
@@ -28,9 +37,8 @@
 
 
 
-
-  <script>
-
+<script src="js/script.js">
+  showJeu();
     $(function() {
       var ok = 1;
       function deplace()
@@ -85,11 +93,14 @@
       setInterval(collision, 20);
     });
   </script>
+
+    
+</div>
+<footer id="footer">Mentions legales</footer>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.js"></script>
-</div>
-
+    <script src="js/script.js" type="text/javascript"></script>
 </body>
-<footer>Mentions legales</footer>
+
 
 </html>
