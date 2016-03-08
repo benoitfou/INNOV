@@ -29,11 +29,12 @@
       left: 0px;
     }
     #acceuil{
-      margin-left: 25%;
-      height: 60%
-      top:;
+      margin-left: 20%;
+      height: 700px;
+      margin-top: 5%;
+      top:5%;
       padding: 2%;
-      width: 50%;
+      width: 60%;
       background-color:#32C2C2;
       border-radius: 10px;
       border-style: solid;

@@ -6,6 +6,8 @@
 	<title>INNOV'UP</title>
 </head>
 <body>
+<div id="acceuilext">
+<h1 id="titreEntreprise">Pick-up</h1>
 <?php include 'acceuil.php'; ?>
  <center>Score : <span id="info">0</span></center>
   <div id="jeu">
@@ -85,6 +87,7 @@
   </script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.js"></script>
+</div>
 
 </body>
 <footer>Mentions legales</footer>
