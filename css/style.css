@@ -29,14 +29,16 @@
       left: 0px;
     }
     #acceuil{
-      margin-left: auto;
-      margin-right: auto;
-      height: 80%;
+      margin-left: 25%;
+      height: 60%
+      top:;
       padding: 2%;
       width: 50%;
       background-color:#32C2C2;
       border-radius: 10px;
       border-style: solid;
+      position: absolute;
+      z-index: 999;
     }
     #titreEntreprise{
       border-color: black;

@@ -3,23 +3,38 @@
 <head>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
-	<title></title>
+	<title>INNOV'UP</title>
 </head>
 <body>
+<?php include 'acceuil.php'; ?>
  <center>Score : <span id="info">0</span></center>
   <div id="jeu">
+
     <img id="fond1" class="fond" src="image/route.png">
     <img id="fond2" class="fond" src="image/route.png">
     <img id="lapin" src="image/lapin1.gif">
-    <img id="vr" src="image/vr.png">
+
+    <div id="vr">
+      <img id="vr1" src="image/logo1.png">
+    </div>
   </div>
   <audio preload="auto" id="son"><source src="son/manger.mp3" type="audio/mp3"><source src="son/manger.ogg" type="audio/ogg"></audio>
   <center><audio controls loop preload="auto" id="musique"><source src="son/musique.mp3" type="audio/mp3"><source src="son/musique.ogg" type="audio/ogg"></audio></center><script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+
+
+
+
+
   <script>
+
     $(function() {
       var ok = 1;
       function deplace()
       {
+        var rdm = Math.floor((Math.random()*5)+1);
+        document.getElementById('vr1').src="image/logo"+rdm+".png";
         $('#vr').animate({left: '-=1200'}, 2000, 'linear', function(){ //on peut augmenter la difficulté avec cette variable (2em)
           var vrX = Math.floor(Math.random()*450)+50;
           var vrY = 1100;
@@ -70,5 +85,8 @@
   </script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.js"></script>
+
 </body>
+<footer>Mentions legales</footer>
+
 </html>
