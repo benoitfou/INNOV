@@ -7,11 +7,15 @@
       overflow: hidden;
       position: relative;
     }
+    #jeu.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+    }
     .fond{
       margin-right:-5px; 
       z-index: 10;
       position: relative;
-          }
+    }
     #lapin{
       z-index: 100; 
       position: absolute; 
@@ -27,16 +31,12 @@
     #acceuil{
       margin-left: auto;
       margin-right: auto;
-      height: 50%;
+      height: 80%;
       padding: 2%;
       width: 50%;
       background-color:#32C2C2;
       border-radius: 10px;
       border-style: solid;
-    }
-    #acceuil.img{
-      width: 100px;
-      height: 100px;
     }
     #titreEntreprise{
       border-color: black;
@@ -45,4 +45,16 @@
       background-color: #32C2C2;
       margin-top: 0px;
     }
-    
+    footer{
+      position: relative;
+      bottom:0;
+      right: 0;
+      width: 100%;
+      height: 25px;
+      border: 3px solid black;
+      border-radius: 10px;
+    }
+    body{
+      height: 100%;
+      width: 100%;
+    }

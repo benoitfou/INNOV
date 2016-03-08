@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
 	<title></title>
 </head>
 <body>
- Collisions : <span id="info">0</span>
+ <center>Score : <span id="info">0</span></center>
   <div id="jeu">
     <img id="fond1" class="fond" src="image/route.png">
     <img id="fond2" class="fond" src="image/route.png">
@@ -15,9 +14,7 @@
     <img id="vr" src="image/vr.png">
   </div>
   <audio preload="auto" id="son"><source src="son/manger.mp3" type="audio/mp3"><source src="son/manger.ogg" type="audio/ogg"></audio>
-  <audio preload="auto" id="musique"><source src="son/musique.mp3" type="audio/mp3"><source src="son/musique.ogg" type="audio/ogg"></audio>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <center><audio controls loop preload="auto" id="musique"><source src="son/musique.mp3" type="audio/mp3"><source src="son/musique.ogg" type="audio/ogg"></audio></center><script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script>
     $(function() {
       var ok = 1;

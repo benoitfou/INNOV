@@ -15,4 +15,5 @@
 	<a href="?logo=5"></a><img src="image/logo5.png"></a>
 </div>
 </body>
+<footer>Mentions legales</footer>
 </html>
