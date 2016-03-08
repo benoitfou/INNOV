@@ -18,7 +18,20 @@ if (isset($_GET['logo'])) {
 <h1 id="titreEntreprise">Pick-up</h1>
 <?php include 'acceuil.php'; ?>
 <input id="divlogo" value="<?php echo $logo?>"></input>
- <center id="score">Score : <span id="info">0</span></center>
+  <div id="liens">
+  <a href="http://www.epsi.fr"><img src="image/logo1.png"/></a><br><br>
+  <a href="http://www.wis-ecoles.com/"><img src="image/logo2.png"/></a><br><br>
+  <a href="http://www.ecoles-supdecom.com/?gclid=CJLO0L37sMsCFc0y0wodD5INOg"><img src="image/logo3.png"/></a><br><br>
+  <a href="http://www.ifag.com/?gclid=CJrtrNL2sMsCFQUUwwodgkkKQg"><img src="image/logo4.png"/></a><br><br>
+  <a href="http://www.ecoles-idrac.com/"><img src="image/logo5.png"/></a> 
+  </div>
+  <div id="bestscore">
+  Meilleurs scores :<br><br>
+  #1 - 52 <br><br>
+  #2 - 30<br><br>
+  #3 - 28<br><br>
+</div>
+<div id="score"> <center>Score : <span id="info">0</span></center></div>
   <div id="jeu">
 
     <img id="fond1" class="fond" src="image/route.png">
@@ -37,8 +50,7 @@ if (isset($_GET['logo'])) {
 
 
 
-<script src="js/script.js">
-  showJeu();
+<script>
     $(function() {
       var ok = 1;
       function deplace()
@@ -85,7 +97,7 @@ if (isset($_GET['logo'])) {
           $('#son')[0].play();
           collision = parseInt($('#info').text()) + 1;
           $('#info').text(collision);
-	  ok = 0;
+	        ok = 0;
         }
       }
       deplace();
@@ -96,7 +108,6 @@ if (isset($_GET['logo'])) {
 
     
 </div>
-<footer id="footer">Mentions legales</footer>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js" type="text/javascript"></script>

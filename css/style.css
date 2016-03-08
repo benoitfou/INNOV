@@ -68,11 +68,18 @@
 		color: white;
 		z-index:2;
 		margin-left: 22%;
-		margin-top:6%;
+		margin-top:2%;
 	}
 	
 	#liens{
 		position: absolute;
 		margin-left:2%;
-		margin-top:7%;
+		margin-top:1%;
 	}
+  #bestscore{
+    position: absolute;
+    margin-left:85%;
+    margin-top:1%;
+    font-size: 30px;
+    color: 1C1C1C;
+  }
