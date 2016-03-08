@@ -25,9 +25,24 @@
       left: 0px;
     }
     #acceuil{
+      margin-left: auto;
+      margin-right: auto;
       height: 50%;
       padding: 2%;
       width: 50%;
-      background-color: rgba(0, 0, 0, 0.5019607843137255);
+      background-color:#32C2C2;
       border-radius: 10px;
+      border-style: solid;
     }
+    #acceuil.img{
+      width: 100px;
+      height: 100px;
+    }
+    #titreEntreprise{
+      border-color: black;
+      border-radius: 4;
+      border-style: solid;
+      background-color: #32C2C2;
+      margin-top: 0px;
+    }
+    
